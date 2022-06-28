@@ -9,14 +9,13 @@ synth = speechSynthesis;
 function randomQuote(){
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "Loading Quote...";
-    fetch("http://api.quotable.io/random").then(response => response.json()).then(result => {
+    fetch("https://api.quotable.io/random").then(response => response.json()).then(result => {
         quoteText.innerText = result.content;
         authorName.innerText = result.author;
         quoteBtn.classList.remove("loading");
         quoteBtn.innerText = "New Quote";
     });
 }
-
 speechBtn.addEventListener("click", ()=>{
     if(!quoteBtn.classList.contains("loading")){
         let utterance = new SpeechSynthesisUtterance(`${quoteText.innerText} by ${authorName.innerText}`);
