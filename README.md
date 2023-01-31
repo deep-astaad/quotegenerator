@@ -1,2 +1,3 @@
-# quotegenerator
-Random Quote Generator
+# Random Quote Generator
+## https://deep-astaad.github.io/quotegenerator/
+
